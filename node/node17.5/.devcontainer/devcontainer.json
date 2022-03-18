@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/python-3
+{
+	"name": "node-17.5-devenv",
+	"image":"node:17.5.0-alpine3.15",
+	"mounts": [
+		"source=node_175_devenv-node_modules,target=${containerWorkspaceFolder}/src/node_modules,type=volume"
+	],
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash"
+			}
+		},		
+	},	
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// "octref.vetur",		
+	],	
+}
