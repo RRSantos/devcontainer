@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/python-3
+{
+	"name": "python-3.8-devenv",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"bash": {
+				"path": "/bin/bash"
+			}
+		},
+		"editor.defaultFormatter":"ms-python.python",
+		"editor.formatOnSave":true,
+		"editor.formatOnSaveMode": "file",
+		"python.defaultInterpreterPath": "/usr/local/bin/python",
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.flake8Enabled": true,
+		"python.analysis.typeCheckingMode":"basic",
+		"python.formatting.provider":"autopep8",
+		 "python.linting.pylintArgs": ["--disable=C0111"]
+	},	
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance"
+	],
+}
