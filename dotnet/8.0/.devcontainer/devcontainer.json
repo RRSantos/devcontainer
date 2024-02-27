@@ -1,0 +1,52 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.3/containers/python-3
+{
+	"name": "dotnet-8.0",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+
+		}
+	},
+	"containerEnv": {
+
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"humao.rest-client",
+				"ms-dotnettools.csharp",
+				"mhutchie.git-graph",
+				"usernamehw.errorlens",
+				"pkief.material-icon-theme",
+				"redhat.vscode-yaml",
+				"johnpapa.vscode-peacock",
+				"github.copilot",
+				"shardulm94.trailing-spaces",
+				"kreativ-software.csharpextensions"
+			],
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				},
+				"editor.formatOnSave": true,
+				"editor.formatOnSaveMode": "file",
+				"editor.rulers": [
+					100
+				],
+				"editor.defaultFormatter": "ms-dotnettools.csharp",
+
+				"workbench.colorCustomizations": {
+					"editorRuler.foreground": "#ff4081"
+				}
+			}
+		}
+	},
+	"remoteEnv": {
+
+	}
+
+}
