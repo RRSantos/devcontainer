@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0.201-bookworm-slim
 
-ARG USERNAME=developer
+ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
