@@ -14,7 +14,7 @@ RUN pip install pytest
 
 
 # Create the user
-ARG USERNAME=developer
+ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
