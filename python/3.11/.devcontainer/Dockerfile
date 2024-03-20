@@ -5,12 +5,8 @@ RUN apt-get update && apt-get install git -y
 
 # install python stuff
 RUN python -m pip install --upgrade pip
-RUN pip install flake8 --upgrade
-RUN pip install autopep8 --upgrade
-RUN pip install black
-RUN pip install isort
-RUN pip install bandit
-RUN pip install pytest
+RUN pip install flake8 autopep8 black isort bandit build pytest pytest-cov  --upgrade
+
 
 
 # Create the user

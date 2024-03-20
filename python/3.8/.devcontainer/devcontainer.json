@@ -16,10 +16,12 @@
 				"ms-python.flake8",
 				"ms-python.isort",
 				"ms-python.vscode-pylance",
+				"nwgh.bandit",
 				"johnpapa.vscode-peacock",
 				"github.copilot",
 				"shardulm94.trailing-spaces",
-				"ms-python.black-formatter"
+				"ms-python.black-formatter",
+				"humao.rest-client"
 			],
 			"settings": {
 				"terminal.integrated.profiles.linux": {
@@ -36,14 +38,13 @@
 				"workbench.colorCustomizations": {
 					"editorRuler.foreground": "#ff4081"
 				},
-				"python.linting.enabled": true,
-				"python.linting.flake8Enabled": true,
-				"python.linting.flake8Args": [
+				"flake8.args": [
 					"--max-line-length=100",
 					"--ignore=E203"
 				],
-				"python.linting.banditEnabled": true,
-				"python.linting.banditArgs": [
+				"flake8.lintOnChange": true,
+				"flake8.showNotification": "onWarning",
+				"bandit.args": [
 					"-r",
 					"--configfile",
 					"${workspaceFolder}/src/bandit.yaml"
@@ -57,7 +58,10 @@
 				"python.languageServer": "Pylance",
 				"python.analysis.typeCheckingMode": "basic",
 				"python.analysis.diagnosticMode":"workspace",
-				"python.analysis.completeFunctionParens":true
+				"python.analysis.completeFunctionParens":true,
+				"python.testing.pytestArgs": [
+					"src"
+				],
 				// "python.analysis.inlayHints.variableTypes":true,
 				// "python.analysis.inlayHints.functionReturnTypes":true,
 				// "python.analysis.inlayHints.pytestParameters":true
@@ -67,9 +71,9 @@
 	"remoteEnv": {
 
 	},
-	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-	]
+	// "mounts": [
+	// 	"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+	// ]
 
 	// Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
 	// "portsAttributes": {
